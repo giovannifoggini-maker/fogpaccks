@@ -1,0 +1,31 @@
+# Python runtime / tests
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# App-generated local state
+fogpacks_data.json
+fogpacks_data.tmp
+workspace/
+backups/
+imports/curseforge-cache/
+
+# Third-party binaries and personal downloads: do not publish these to GitHub by default
+imports/*.jar
+imports/*.JAR
+imports/*.zip
+imports/*.ZIP
+
+# Temporary build / export files
+*.tmp
+*.fogpacks-tmp
+fogpacks_rendered_test.html
+frontend-check.js
+.DS_Store
+Thumbs.db
+rendered.html
+ui.png
+ui_mobile.png
+final-ui-mobile.png

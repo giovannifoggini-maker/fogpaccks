@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Compile Python
+        run: python -m py_compile fogpacks.py
+      - name: Run standard-library tests
+        run: python -m unittest discover -s tests -v
+      - name: Validate embedded JavaScript
+        shell: bash
+        run: |
+          python - <<'PY'
+          import re
+          from pathlib import Path
+          import fogpacks
+          page = fogpacks.render_curseforge_page(fogpacks.PAGE)
+          scripts = re.findall(r'<script(?:\s[^>]*)?>(.*?)</script>', page, re.S | re.I)
+          if len(scripts) != 1:
+              raise SystemExit(f'Expected one inline script, found {len(scripts)}')
+          Path('frontend-check.js').write_text(scripts[0], encoding='utf-8')
+          PY
+          node --check frontend-check.js
