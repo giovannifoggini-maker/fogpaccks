@@ -1,0 +1,38 @@
+FOGPACKS CLOUD EDITION + VERSIONE LOCALE COMPLETA
+
+IL PACCHETTO CONSERVA ENTRAMBE LE VERSIONI
+- Cloud Edition: pubblicabile da GitHub su Cloudflare Pages. Mantiene dashboard, cataloghi Mods e utility, Mod Maker 3D, editor JSON/Java, esportazione PNG/JSON/ZIP, impostazioni nel browser e log locali del browser.
+- Versione locale completa: la cartella local-edition contiene il codice Python originale con il launcher Windows, i documenti e gli asset necessari. Puoi anche scaricarla dalla pagina Cloud Edition, in Impostazioni.
+
+API E COSTI
+- Nessuna API a pagamento, token privato o chiave segreta.
+- Le ricerche di release usano una Pages Function su /api/modrinth che richiama l'API pubblica di Modrinth.
+- Cloudflare Pages ha un piano gratuito con limiti propri; anche Modrinth applica limiti di richiesta. Le policy e i limiti possono cambiare.
+- public/_routes.json limita l'esecuzione delle Pages Functions alle rotte /api/* così i file statici non richiedono inutilmente l'esecuzione serverless.
+
+PUBBLICAZIONE DA GITHUB
+1. Estrai tutto lo ZIP.
+2. Carica il contenuto estratto in un repository GitHub (non caricare il file ZIP come unico file).
+3. In Cloudflare apri Workers & Pages → Create application → Pages → Import an existing Git repository.
+4. Seleziona il repository e imposta il branch di produzione (normalmente main).
+5. Framework preset: None.
+6. Build command: exit 0
+7. Build output directory: public
+8. Root directory: lascia vuoto se public/ e functions/ sono nella radice del repository.
+9. Avvia il deployment e apri l'indirizzo .pages.dev.
+
+La cartella functions/ deve restare nella radice del repository, allo stesso livello di public/, non dentro public/. Cloudflare usa functions/api/modrinth.js per /api/modrinth e functions/api/status.js per /api/status.
+
+USO DEL CATALOGO CLOUD
+1. Apri Minecraft Mods oppure Cheats/Utility client.
+2. Seleziona Fabric, Forge o NeoForge nella pagina Minecraft Mods.
+3. Premi “Cerca release gratuita” sulla mod desiderata.
+4. Leggi la versione proposta e apri la pagina/download della release ufficiale.
+5. La Cloud Edition non può scrivere nelle cartelle private del tuo computer: dopo il download, installa il JAR nella cartella mods corretta del profilo Minecraft.
+
+FUNZIONI MANTENUTE NELLA VERSIONE LOCALE
+La versione locale conserva il rilevamento del profilo Minecraft, la gestione e verifica di JAR/ZIP, l'installazione locale, l'importazione dei sorgenti, il workspace sul disco e i backup. Estrai local-edition/ ed esegui Avvia_Fogpacks.bat su Windows con Python 3.11+ (Python 3.13 consigliato). Non richiede pacchetti Python esterni.
+
+LIMITI TECNICI
+Una pagina pubblica non può leggere i file privati del PC, rilevare automaticamente il launcher Minecraft o installare mod direttamente sul dispositivo. Cloud Edition mantiene la creazione di asset nel browser e la ricerca di release online; le operazioni su file locali sono incluse nella versione locale.
+Il Mod Maker genera asset e una specifica Java modificabile, non un JAR compilato né una mod pronta e registrata in Minecraft.

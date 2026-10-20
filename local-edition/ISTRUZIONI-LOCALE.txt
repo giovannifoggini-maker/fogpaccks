@@ -1,0 +1,19 @@
+FOGPACKS — VERSIONE LOCALE COMPLETA
+
+Questa cartella conserva la versione Python completa di Fogpacks, per le funzioni che devono accedere ai file del computer.
+
+REQUISITI
+- Windows 10/11
+- Python 3.13 consigliato (3.11 o superiore)
+- Non servono pacchetti Python aggiuntivi: viene usata la libreria standard.
+
+AVVIO
+1. Estrai questa cartella in una posizione normale del computer.
+2. Fai doppio clic su Avvia_Fogpacks.bat.
+3. Si apre il browser all'indirizzo locale mostrato nel terminale.
+4. Lascia aperta la finestra del terminale mentre usi Fogpacks. Per terminare, premi Ctrl+C nel terminale.
+
+La versione locale conserva le funzioni che richiedono accesso al profilo Minecraft, ai JAR locali, agli archivi sorgente, al workspace e ai backup. I dati creati vengono salvati nella cartella di questa applicazione.
+
+SICUREZZA E DISTRIBUZIONE
+Il server locale è vincolato a 127.0.0.1. Non esporlo su Internet e non inoltrare la sua porta. Il repository sorgente non comprende binari di mod di terze parti. Verifica sempre licenze e compatibilità dei file aggiunti.
