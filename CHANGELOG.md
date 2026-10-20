@@ -1,3 +1,9 @@
+## Cloud Edition visual refresh — 2026-10-20
+
+- Refined the Cloud Edition with a restrained dark-navy palette, subtle violet accents, thinner borders, and less glow.
+- Replaced the temporary hero cube illustration with the same cube mark used by the favicon.
+- Unified cube logo and favicon assets across Cloud Edition, the local edition, and its downloadable ZIP. No paid API keys or extra runtime dependencies added.
+
 # Changelog
 
 ## 1.2.2 — 2026-10-20

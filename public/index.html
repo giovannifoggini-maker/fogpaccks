@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0b0d14">
+<meta name="theme-color" content="#0b0f18">
 <link rel="icon" href="/assets/fogpacks-favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="512x512" href="/assets/fogpacks-logo.png">
@@ -36,6 +36,77 @@ main{min-width:0;padding:28px clamp(18px,3.3vw,48px) 36px;max-width:1600px;width
 
 
 [hidden]{display:none!important}.cloud-modal-backdrop{position:fixed;inset:0;z-index:100;background:rgba(3,5,12,.78);backdrop-filter:blur(8px);display:grid;place-items:center;padding:18px}.cloud-modal{width:min(760px,100%);max-height:min(82vh,900px);overflow:auto;border:1px solid #37334f;background:#11141e;border-radius:20px;padding:24px;box-shadow:0 24px 100px #0008}.cloud-modal-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:12px}.cloud-modal h2{margin-top:8px}.cloud-modal-results{display:grid;gap:10px;margin:18px 0}.cloud-result{border:1px solid var(--line);background:#0d1019;border-radius:13px;padding:14px;display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center}.cloud-result h3{margin-bottom:5px}.cloud-result p{margin:0;color:var(--muted);font-size:12px;line-height:1.6}.cloud-result-actions{display:flex;flex-wrap:wrap;gap:7px;justify-content:flex-end}.cloud-result-actions a{white-space:nowrap;text-decoration:none}.cloud-status{color:var(--muted);padding:12px 2px}.cloud-loader-pill{display:inline-flex;padding:5px 8px;border:1px solid var(--line);border-radius:7px;color:#c9c1ff;font-size:10px}@media(max-width:600px){.cloud-modal{padding:17px}.cloud-result{grid-template-columns:1fr}.cloud-result-actions{justify-content:flex-start}.cloud-modal-head{align-items:center}}
+
+
+/* Fogpacks Cloud Edition — refined dark-navy theme */
+:root {
+  color-scheme: dark;
+  --bg: #0b0f18;
+  --panel: #111824;
+  --panel2: #151e2d;
+  --line: #293449;
+  --text: #eef1f8;
+  --muted: #9ba8bd;
+  --purple: #9184ed;
+  --purple2: #5d50b8;
+  --cyan: #91b8dc;
+  --green: #7bc6a4;
+  --amber: #dcb979;
+  --red: #e58c92;
+  --radius: 15px;
+}
+html { background: var(--bg); }
+body { background: #0b0f18 !important; color: var(--text); }
+.sidebar { background: #0b1019 !important; backdrop-filter: none !important; border-right-color: #273044 !important; }
+.brand-mark { box-shadow: none !important; border: 1px solid #39365c; background: #111525; }
+.brand-name { letter-spacing: -0.45px; }
+.brand-sub { color: #9ba8bd !important; letter-spacing: 1.6px; }
+.nav-btn { color: #b2bdd0; border-radius: 9px !important; }
+.nav-btn:hover { background: #151d2b !important; }
+.nav-btn.active { background: #252343 !important; border-color: #3d3966 !important; color: #e4e0ff !important; }
+.nav-btn.active:before { background: #9184ed !important; }
+.nav-label { color: #7e8aa1 !important; }
+.local-card { background: #101722 !important; border-color: #293449 !important; }
+.dot { box-shadow: none !important; }
+main { max-width: 1680px; }
+.topbar { margin-bottom: 26px; }
+.breadcrumbs strong { color: #e2e7f1 !important; }
+.search, .version-pill { background: #101723 !important; border-color: #293449 !important; }
+.hero { background: linear-gradient(110deg, #151d2c 0%, #121925 70%, #101621 100%) !important; border: 1px solid #2e3a50 !important; border-radius: 17px !important; box-shadow: none !important; }
+.hero:after { display: none !important; }
+.hero .eyebrow { color: #a49aed !important; }
+.hero h1 span { color: #a69cf4 !important; background: none !important; -webkit-text-fill-color: #a69cf4 !important; }
+.hero-art { width: 108px !important; height: 108px !important; margin: 0 8px 0 0 !important; border: 0 !important; border-radius: 0 !important; background: transparent !important; transform: none !important; box-shadow: none !important; }
+.hero-art img { display: block; width: 100%; height: 100%; object-fit: contain; filter: none !important; }
+.hero-art svg { filter: none !important; transform: none !important; }
+.btn { background: #172031 !important; border-color: #2e3a50 !important; border-radius: 9px !important; box-shadow: none !important; }
+.btn:hover { background: #202a3d !important; border-color: #625c91 !important; transform: none !important; }
+.btn.primary { background: #51489d !important; border-color: #675fb1 !important; color: #fff !important; box-shadow: none !important; }
+.btn.primary:hover { background: #5b52aa !important; }
+.module-card, .stat-card, .console, .template-card, .settings-card, .library-panel { background: #111823 !important; background-image: none !important; border-color: #293449 !important; box-shadow: none !important; border-radius: 14px !important; }
+.module-card:hover { border-color: #514b7e !important; transform: none !important; }
+.card-bottom { border-top-color: #263044 !important; }
+.icon-tile { border-color: #2d3650 !important; border-radius: 10px !important; }
+.icon-purple { background: #24213f !important; color: #b6adff !important; }
+.icon-cyan { background: #192b38 !important; color: #9fc6e3 !important; }
+.icon-green { background: #192c29 !important; color: #8bcbb0 !important; }
+.icon-amber { background: #30291d !important; color: #ddc28e !important; }
+.tag { background: #121a27 !important; border-color: #2d374b !important; color: #aab6ca !important; }
+.text-link { color: #b0a7f4 !important; }
+.arrow-btn { background: #172031 !important; color: #b7c2d7 !important; }
+.arrow-btn:hover { background: #242343 !important; color: #dedaff !important; }
+.logs { background: #0c121c !important; border-color: #273146 !important; }
+.log-prefix { color: #9c91eb !important; }
+.status-row { border-bottom-color: #252e40 !important; }
+.filter, .input, select.input, textarea.input { background: #101723 !important; border-color: #2b374b !important; }
+.filter.active { color: #e1ddff !important; border-color: #555087 !important; background: #24213e !important; }
+.library-item { background: #0f1622 !important; border-color: #293449 !important; }
+.library-item:hover { border-color: #514b7e !important; }
+.toast { box-shadow: 0 8px 24px #0005 !important; border-color: #393954 !important; }
+.footer { color: #717e94 !important; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
 
 </style>
 <style>
@@ -105,7 +176,7 @@ main{min-width:0;width:100%;max-width:1600px;overflow-x:clip}
 <main>
 <header class="topbar"><div class="top-brand"><button class="mobile-menu" id="mobileMenu" aria-label="Apri menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button><div class="top-brand-mark" aria-hidden="true"><img src="/assets/fogpacks-logo.svg" alt="" width="32" height="32"></div><span class="top-brand-name">FOGPACKS</span><span class="top-brand-divider"></span><div class="breadcrumbs"><strong id="crumb">Panoramica</strong></div></div><div class="top-actions"><label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg><input id="searchInput" type="search" placeholder="Cerca un modulo…" aria-label="Cerca un modulo"></label><label class="language-picker" title="Lingua interfaccia"><span class="language-icon" aria-hidden="true">文</span><select id="languageSelect" class="language-select" aria-label="Lingua interfaccia"><option value="it">IT</option><option value="en">EN</option><option value="fr">FR</option></select></label><div class="version-pill" id="pythonPill">CLOUDFLARE FREE</div></div></header>
 <section class="page active" id="page-dashboard">
-  <div class="hero"><div class="hero-copy"><div class="eyebrow">Il tuo spazio di lavoro Minecraft</div><h1>Crea il tuo mondo.<br><span>Rendilo tuo.</span></h1><p class="lead">Uno spazio web per creare texture pixel art 3D, esportare asset in ZIP e cercare release compatibili tramite API pubbliche gratuite.</p><div class="hero-buttons"><button class="btn primary" data-go="fogpacks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5v14M5 12h14"/></svg>Apri Fogpacks</button><button class="btn" data-go="mods">Esplora i moduli <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button></div></div><div class="hero-art"><svg viewBox="0 0 100 100" fill="none"><path d="M50 8 84 27.5v39L50 86 16 66.5v-39L50 8Z" stroke="#c8bdff" stroke-width="2"/><path d="M16.5 28 50 47.5 83.5 28M50 47.5V85" stroke="#c8bdff" stroke-width="2"/><path d="M29 39c7-7 14 7 21 0s14 7 21 0M29 50c7-7 14 7 21 0s14 7 21 0M29 61c7-7 14 7 21 0s14 7 21 0" stroke="#8ce7e9" stroke-width="2.5" stroke-linecap="round"/></svg></div></div>
+  <div class="hero"><div class="hero-copy"><div class="eyebrow">Il tuo spazio di lavoro Minecraft</div><h1>Crea il tuo mondo.<br><span>Rendilo tuo.</span></h1><p class="lead">Uno spazio web per creare texture pixel art 3D, esportare asset in ZIP e cercare release compatibili tramite API pubbliche gratuite.</p><div class="hero-buttons"><button class="btn primary" data-go="fogpacks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5v14M5 12h14"/></svg>Apri Fogpacks</button><button class="btn" data-go="mods">Esplora i moduli <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button></div></div><div class="hero-art"><img src="/assets/fogpacks-logo.png" alt="Logo Fogpacks" width="108" height="108"></div></div>
   <div class="section-head"><div><h2>I tuoi strumenti</h2><p>Scegli una sezione per iniziare a lavorare.</p></div><button class="text-link" data-go="settings">Configura ambiente ↗</button></div>
   <div class="grid">
    <article class="module-card" data-searchable="fogpacks resource pack json shader modding toolkit"><div class="card-head"><div class="icon-tile icon-purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 8.5 12 4l8 4.5v8L12 21l-8-4.5v-8Z"/><path d="m4 8.5 8 4.5 8-4.5M12 13v8M7 6l8 4.5"/></svg></div><span class="tag">RESOURCE PACK</span></div><h3>Fogpacks</h3><p>Crea texture e modelli, poi esporta i file per il tuo progetto Minecraft.</p><div class="card-bottom"><span>Pack · JSON · Shader</span><button class="arrow-btn" data-go="fogpacks" aria-label="Apri Fogpacks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button></div></article>
