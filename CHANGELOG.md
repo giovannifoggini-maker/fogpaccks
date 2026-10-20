@@ -1,3 +1,8 @@
+## 1.2.3 — 2026-10-20
+
+- Ripristinato il logo originale del cubo viola/blu ricavandolo dall’immagine di riferimento; favicon, icona Apple, logo PNG e SVG condividono ora lo stesso simbolo nelle versioni cloud e locale.
+- Ridotti i bordi e gli aloni aggiunti via CSS attorno al marchio per non duplicare la cornice e il bagliore del file originale.
+
 ## Cloud Edition visual refresh — 2026-10-20
 
 - Refined the Cloud Edition with a restrained dark-navy palette, subtle violet accents, thinner borders, and less glow.

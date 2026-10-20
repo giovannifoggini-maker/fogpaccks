@@ -1,3 +1,9 @@
+## 1.2.3 — 2026-10-20
+
+- Logo originale del cubo viola/blu ripristinato a partire dallo screenshot di riferimento, senza ridisegno.
+- Favicon, icona Apple, PNG e SVG sincronizzati tra Cloud Edition e Local Edition.
+- Rimossi i bagliori CSS aggiuntivi attorno al logo per mantenere l’interfaccia più sobria.
+
 # Changelog
 
 ## 1.2.2 — 2026-10-20
